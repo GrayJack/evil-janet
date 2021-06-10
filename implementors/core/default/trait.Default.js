@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["evil_janet"] = [{"text":"impl&lt;T:&nbsp;<a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/default/trait.Default.html\" title=\"trait core::default::Default\">Default</a>&gt; <a class=\"trait\" href=\"https://doc.rust-lang.org/nightly/core/default/trait.Default.html\" title=\"trait core::default::Default\">Default</a> for <a class=\"struct\" href=\"evil_janet/struct.__IncompleteArrayField.html\" title=\"struct evil_janet::__IncompleteArrayField\">__IncompleteArrayField</a>&lt;T&gt;","synthetic":false,"types":["evil_janet::__IncompleteArrayField"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
