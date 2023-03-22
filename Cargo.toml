@@ -1,6 +1,6 @@
 [package]
 name = "evil-janet"
-version = "1.26.0"
+version = "1.27.0"
 authors = [
   "Eric Shimizu Karbstein <gr41.j4ck@gmail.com>",
   "Andrew Chambers <ac@acha.ninja>",

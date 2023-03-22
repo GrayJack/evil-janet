@@ -2,18 +2,14 @@
 
 set -eux
 
-version="1.26.0"
+version="1.27.0"
 
-if ! test -d ./janet/.git
-then
-  rm -rf ./janet
-  git clone https://github.com/janet-lang/janet
-fi
+rm -rf ./janet
+curl -L https://github.com/janet-lang/janet/archive/refs/tags/v$version.tar.gz > janet.tar.gz
+tar xf janet.tar.gz
+mv janet-$version janet
+
 cd ./janet
-git checkout master
-git pull
-git checkout "v${version}"
-git clean -fxd
 make
 mkdir -p ../csrc
 cp build/c/janet.c ../csrc/
