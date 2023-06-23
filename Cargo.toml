@@ -39,8 +39,8 @@ system = []
 # Compile with max debug symbols
 debug-symbols = []
 
-[dependencies]
-libc = "0.2"
+[target.'cfg(not(any(target_arch = "wasm32", target_arch = "wasm64")))'.dependencies]
+libc = { version="0.2" }
 
 [build-dependencies]
 bindgen = { version = "0.64.0", no-default-features = true, features = [
@@ -48,3 +48,4 @@ bindgen = { version = "0.64.0", no-default-features = true, features = [
   "which-rustfmt",
 ] }
 cc = "1.0"
+which = "4.4.0"

@@ -7,7 +7,7 @@ version="1.27.0"
 if ! test -d ./janet/.git
 then
   rm -rf ./janet
-  git clone https://github.com/janet-lang/janet
+  git clone --depth 1 https://github.com/janet-lang/janet
 fi
 cd ./janet
 git checkout master
