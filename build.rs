@@ -28,7 +28,7 @@ fn main() {
         .header(header)
         .derive_debug(true)
         .use_core()
-        .ctypes_prefix("::libc")
+        .ctypes_prefix("core::ffi")
         .allowlist_type(allowlist_regex)
         .allowlist_function(allowlist_regex)
         .allowlist_var(allowlist_regex)
