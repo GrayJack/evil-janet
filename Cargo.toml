@@ -5,13 +5,14 @@ authors = [
   "Eric Shimizu Karbstein <gr41.j4ck@gmail.com>",
   "Andrew Chambers <ac@acha.ninja>",
 ]
-edition = "2018"
+edition = "2021"
 description = "Low level bindings to the janet language c api."
 repository = "https://github.com/GrayJack/evil-janet"
 license-file = "LICENSE"
 categories = ["external-ffi-bindings", "no-std"]
 keywords = ["janet", "embedding", "ffi"]
 exclude = ["/.github", "/.vscode", "/shell.nix", "/update-janet.sh"]
+rust-version = "1.71.0"
 
 [package.metadata.docs.rs]
 targets = [
@@ -43,7 +44,7 @@ debug-symbols = []
 libc = "0.2"
 
 [build-dependencies]
-bindgen = { version = "0.64.0", no-default-features = true, features = [
+bindgen = { version = "0.66.1", no-default-features = true, features = [
   "runtime",
   "which-rustfmt",
 ] }
