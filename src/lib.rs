@@ -40,14 +40,7 @@ impl Hash for Janet {
 impl PartialOrd<Janet> for Janet {
     #[inline]
     fn partial_cmp(&self, other: &Janet) -> Option<Ordering> {
-        let res = unsafe { janet_compare(*self, *other) };
-
-        Some(match res {
-            -1 => Ordering::Less,
-            0 => Ordering::Equal,
-            1 => Ordering::Greater,
-            _ => return None,
-        })
+        Some(self.cmp(other))
     }
 }
 
