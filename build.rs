@@ -33,8 +33,8 @@ fn main() {
         .allowlist_type(allowlist_regex)
         .allowlist_function(allowlist_regex)
         .allowlist_var(allowlist_regex)
-        // .override_abi(bindgen::Abi::CUnwind, allowlist_regex)
-        // .rust_target(bindgen::RustTarget::Nightly)
+        .override_abi(bindgen::Abi::CUnwind, allowlist_regex)
+        .rust_target(bindgen::RustTarget::Stable_1_71)
         .formatter(bindgen::Formatter::Rustfmt);
 
     #[cfg(windows)]
