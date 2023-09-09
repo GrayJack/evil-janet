@@ -44,12 +44,7 @@ debug-symbols = []
 libc = "0.2"
 
 [build-dependencies]
-# bindgen = { version = "0.66.1", no-default-features = true, features = [
-#   "runtime",
-#   "which-rustfmt",
-# ] }
-# TODO: remove this when bindgen 0.67 is released
-bindgen = { git = "https://github.com/rust-lang/rust-bindgen.git", branch = "main", no-default-features = true, features = [
+bindgen = { version = "0.68.1", no-default-features = true, features = [
   "runtime",
   "which-rustfmt",
 ] }
