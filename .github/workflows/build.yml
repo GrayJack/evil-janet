@@ -33,12 +33,12 @@ jobs:
           #   os: windows-latest
     steps:
     - name: Checkout sources
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Install Rust toolchain
       uses: dtolnay/rust-toolchain@master
       with:
         toolchain: ${{ matrix.rust }}
     - name: Cache cargo output
-      uses: Swatinem/rust-cache@v1
+      uses: Swatinem/rust-cache@v2
     - name: Check and Run tests
       run: cargo test --features link-amalg
