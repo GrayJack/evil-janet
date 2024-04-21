@@ -26,10 +26,10 @@
 #define JANETCONF_H
 
 #define JANET_VERSION_MAJOR 1
-#define JANET_VERSION_MINOR 33
+#define JANET_VERSION_MINOR 34
 #define JANET_VERSION_PATCH 0
 #define JANET_VERSION_EXTRA ""
-#define JANET_VERSION "1.33.0"
+#define JANET_VERSION "1.34.0"
 
 /* #define JANET_BUILD "local" */
 
@@ -76,6 +76,7 @@
 /* #define JANET_NO_INTERPRETER_INTERRUPT */
 /* #define JANET_NO_IPV6 */
 /* #define JANET_NO_CRYPTORAND */
+/* #define JANET_USE_STDATOMIC */
 
 /* Custom vm allocator support */
 /* #include <mimalloc.h> */
@@ -2209,7 +2210,8 @@ typedef enum {
     RULE_COLUMN,       /* [tag] */
     RULE_UNREF,        /* [rule, tag] */
     RULE_CAPTURE_NUM,  /* [rule, tag] */
-    RULE_SUB           /* [rule, rule] */
+    RULE_SUB,          /* [rule, rule] */
+    RULE_SPLIT         /* [rule, rule] */
 } JanetPegOpcod;
 
 typedef struct {
