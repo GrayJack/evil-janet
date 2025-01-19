@@ -86,7 +86,7 @@ fn main() {
     build.flag("-ggdb3");
 
     #[cfg(all(feature = "link-amalg", not(feature = "link-system")))]
-    build.no_default_flags(true).compile("janet");
+    build.flag("-fPIC").no_default_flags(true).compile("janet");
 
     // Write the bindings to the $OUT_DIR/bindings.rs file.
     let out_path = std::path::PathBuf::from(std::env::var("OUT_DIR").unwrap());
