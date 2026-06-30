@@ -34,7 +34,7 @@ fn main() {
         .allowlist_function(allowlist_regex)
         .allowlist_var(allowlist_regex)
         .override_abi(bindgen::Abi::CUnwind, allowlist_regex)
-        .rust_target(bindgen::RustTarget::Stable_1_71)
+        .rust_target(bindgen::RustTarget::stable(71, 0).expect("Missing rust target"))
         .formatter(bindgen::Formatter::Rustfmt);
 
     #[cfg(windows)]
