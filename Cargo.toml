@@ -12,7 +12,7 @@ license-file = "LICENSE"
 categories = ["external-ffi-bindings", "no-std"]
 keywords = ["janet", "embedding", "ffi"]
 exclude = ["/.github", "/.vscode", "/shell.nix", "/update-janet.sh"]
-rust-version = "1.71.0"
+rust-version = "1.77.0"
 
 [package.metadata.docs.rs]
 targets = [
