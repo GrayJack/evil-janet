@@ -8,7 +8,7 @@ fn main() {
     compile_error!(r#"You can only use either "link-amalg" or "system" feature, not both."#);
 
     // Link to the system libjanet if the system feature is included
-    #[cfg(feature = "link-system")]
+    #[cfg(any(feature = "system", feature = "link-system"))]
     println!("cargo:rustc-link-lib=janet");
 
     // Make cargo rerun if header changes
