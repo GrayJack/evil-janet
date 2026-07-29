@@ -37,9 +37,6 @@ fn main() {
         .rust_target(bindgen::RustTarget::stable(71, 0).expect("Missing rust target"))
         .formatter(bindgen::Formatter::Rustfmt);
 
-    #[cfg(windows)]
-    let bindings = bindings.clang_args(&["--target=x86_64-pc-windows-gnu"]);
-
     let bindings = bindings.generate().expect("Unable to generate bindings");
 
     // Redefine some Janet configs using environment variables
